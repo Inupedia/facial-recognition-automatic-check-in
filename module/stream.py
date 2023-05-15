@@ -1,6 +1,7 @@
 import cv2
 import streamlink
 import asyncio
+from .stream_recognition import StreamFaceRecognition
 
 
 class TwitchStream:
@@ -52,22 +53,4 @@ class BilibiliStream:
         else:
             raise ValueError("Could not get stream URL")
 
-        cap = cv2.VideoCapture(url)
-
-        while True:
-            ret, frame = cap.read()
-
-            if not ret:
-                break
-
-            # TODO: process the frame, such as face detection, object tracking, etc.
-
-            cv2.imshow("Bilibili Stream", frame)
-
-            if cv2.waitKey(1) == ord("q"):
-                break
-
-            await asyncio.sleep(0)
-
-        cap.release()
-        cv2.destroyAllWindows()
+        await StreamFaceRecognition(url).run_recognition()
