@@ -1,6 +1,7 @@
 numpy
 opencv-python
 Pillow
-face_recognition
+tensorflow
+deepface
 streamlink
 pyaudio

@@ -14,3 +14,6 @@ __pycache__/
 face_db/*.jpg
 face_db/*.png
 face_db/*.jpeg
+
+# ignore .pkl file
+*.pkl
