@@ -9,3 +9,11 @@ __pycache__/
 
 # Ignore .DS_Store files
 .DS_Store
+
+# Ignore image files
+face_db/*.jpg
+face_db/*.png
+face_db/*.jpeg
+
+# ignore .pkl file
+*.pkl
